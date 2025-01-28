@@ -64,6 +64,24 @@ button:hover {
     margin-bottom: 20px;
 }
 
+.download-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #1f4cc7;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.download-btn:hover {
+    background-color: #3a60c9;
+}
+
+
 @media (max-width: 768px) {
     body {
         padding: 20px;
