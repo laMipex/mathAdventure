@@ -13,9 +13,13 @@ body {
 
 h1 {
     text-align: center;
-    color: #1f4cc7;
+    color: #DD864C;
     font-size: 2rem;
     margin-bottom: 20px;
+}
+
+.title {
+    width: 350px;
 }
 
 #auth-section, #profile-section {
@@ -43,7 +47,7 @@ button {
     width: calc(100% - 20px);
     padding: 10px;
     margin: 10px auto;
-    background-color: #1f4cc7;
+    background-color: #DD864C;
     border: none;
     border-radius: 5px;
     color: white;
@@ -53,7 +57,8 @@ button {
 }
 
 button:hover {
-    background-color: #3a60c9;
+    background-color: #df7935;
+    cursor: pointer;
 }
 
 #profile-section {
@@ -68,17 +73,20 @@ button:hover {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #1f4cc7;
+    background-color: #DD864C;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
     text-align: center;
     transition: background-color 0.3s ease;
+    transition: .2s ease-in-out 0s;
 }
 
 .download-btn:hover {
-    background-color: #3a60c9;
+    background-color: #df7935;
+    transform: scale(1.25);
+    cursor: pointer;
 }
 
 
