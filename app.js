@@ -1,9 +1,7 @@
-// Import Firebase SDK
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
 import { getFirestore, doc, getDoc, updateDoc } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-firestore.js";
 
-// Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyBVL9viWyCpl1wXk2iUdZw273lgEPj8vbg",
     authDomain: "mathadventure-3b421.firebaseapp.com",
@@ -15,12 +13,10 @@ const firebaseConfig = {
     measurementId: "G-DLCCMLPDPZ"
   };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
 
-// DOM Elements
 const authSection = document.getElementById('auth-section');
 const profileSection = document.getElementById('profile-section');
 const nicknameInput = document.getElementById('nickname');
@@ -29,7 +25,7 @@ const greeting = document.getElementById('greeting');
 const currentScore = document.getElementById('current-score');
 const newScoreInput = document.getElementById('new-score');
 
-// Login
+
 document.getElementById('login').addEventListener('click', async () => {
     const nickname = nicknameInput.value.trim();
     const password = passwordInput.value;
@@ -44,7 +40,6 @@ document.getElementById('login').addEventListener('click', async () => {
     }
 });
 
-// Load Profile
 onAuthStateChanged(auth, async (user) => {
     if (user) {
         authSection.style.display = 'none';
@@ -66,7 +61,6 @@ onAuthStateChanged(auth, async (user) => {
     }
 });
 
-// Update Score
 document.getElementById('update-score').addEventListener('click', async () => {
     const newScore = parseInt(newScoreInput.value);
 
@@ -82,7 +76,6 @@ document.getElementById('update-score').addEventListener('click', async () => {
     }
 });
 
-// Logout
 document.getElementById('logout').addEventListener('click', async () => {
     await signOut(auth);
     alert('Logged out successfully!');
